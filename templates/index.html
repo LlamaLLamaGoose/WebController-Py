@@ -1,0 +1,179 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewprt" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Nicholas Ciechanowski">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Nicholas C</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='tailwind.css') }}">
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type=text/javascript>
+				$(function() {
+				    $.ajaxSetup ({
+						cache: false
+					});
+					
+				  $('a#full').bind('click', function() {
+					$.getJSON('/full',
+						function(data) {
+					  //do nothing
+					});
+					$("#result").html().load();
+					return false;
+				  });
+				  
+				  $('a#button75').bind('click', function() {
+					$.getJSON('/button75',
+						function(data) {
+					  //do nothing
+					});
+					$("#result").html().load();
+					return false;
+				  });
+				  
+				  $('a#button50').bind('click', function() {
+					$.getJSON('/button50',
+						function(data) {
+					  //do nothing
+					});
+					$("#result").html().load();
+					return false;
+				  });
+				  
+				  $('a#button25').bind('click', function() {
+					$.getJSON('/button25',
+						function(data) {
+					  //do nothing
+					});
+					$("#result").html().load();
+					return false;
+				  });
+				  
+				  $('a#buttonmute').bind('click', function() {
+					$.getJSON('/buttonmute',
+						function(data) {
+					  //do nothing
+					});
+					$("#result").html().load();
+					return false;
+				  });
+				  
+				  $('a#button10').bind('click', function() {
+					$.getJSON('/button10',
+						function(data)
+						{
+					  //do nothing
+					})
+					$("#result").html().load();
+					return false;
+				  });
+				  
+				  $('a#button5').bind('click', function() {
+					$.getJSON('/button5',
+						function(data) {
+					  //do nothing
+					});
+					$("#result").html().load();
+					return false;
+				  });
+				  
+				  $('a#button1').bind('click', function() {
+					$.getJSON('/button1',
+						function(data) {
+					  //do nothing
+					});
+					$("#result").html().load();
+					return false;
+				  });
+				  
+				  $('a#button01').bind('click', function() {
+					$.getJSON('/button01',
+						function(data) {
+					  //do nothing
+					});
+					$("#result").html().load();
+					return false;
+				  });
+				  
+				  $('a#button05').bind('click', function() {
+					$.getJSON('/button05',
+						function(data) {
+					  //do nothing
+					});
+					$("#result").html().load();
+					return false;
+				  });
+				  
+				  $('a#button010').bind('click', function() {
+					$.getJSON('/button010',
+						function(data) {
+					  //do nothing
+					});
+					$("#result").html().load();
+					return false;
+				  });
+				});
+		</script>
+
+    </head>
+    <body class="bg-gray-900 flex flex-col min-h-screen">
+        <header>
+            <a href="/"> <h1 class="text-6xl font-bold text-center text-white m-4"> Nicholas.c Web Controller </h1><br /></a> <hr />
+        </header>
+		<div id="result" ><h2 class="text-2xl font-bold text-center text-white m-6"> Current Volume: {{ output }} </h2></div> <br />
+        <div class="justify-center flex-grow">
+			<form>
+			<div class="flex justify-center" >
+				<p>
+					<a href=# id=full><input class="rounded m-4 h-8 w-16 hover:bg-gray-100 bg-gray-300" type="submit" value="Full" /></a>
+				</p>
+				<p>
+					<a href=# id=button75><input class="rounded m-4 h-8 w-16 hover:bg-gray-100 bg-gray-300" type="submit" value="75%" /></a>
+				</p>
+				<p>
+					<a href=# id=button50><input class="rounded m-4 h-8 w-16 hover:bg-gray-100 bg-gray-300" type="submit" value="50%" /></a>
+				</p>
+				<p>
+					<a href=# id=button25><input class="rounded m-4 h-8 w-16 hover:bg-gray-100 bg-gray-300" type="submit" value="25%" /></a>
+				</p>
+				<p>
+					<a href=# id=buttonmute><input class="rounded m-4 h-8 w-16 hover:bg-gray-100 bg-gray-300" type="submit" value="Mute" /></a>
+				</p>
+			</div>
+			</form>
+        </div>
+        <div class="justify-center flex-grow">
+			<form>
+			<div class="flex justify-center" >
+				<p>
+					<a href=# id=button10><input class="rounded m-4 h-8 w-16 hover:bg-gray-100 bg-gray-300" type="submit" value="+10" /></a>
+				</p>
+				<p>
+					<a href=# id=button5><input class="rounded m-4 h-8 w-16 hover:bg-gray-100 bg-gray-300" type="submit" value="+5" /></a>
+				</p>
+				<p>
+					<a href=# id=button1><input class="rounded m-4 h-8 w-16 hover:bg-gray-100 bg-gray-300" type="submit" value="+1" /></a>
+				</p>
+				<p>
+					<a href=# id=button01><input class="rounded m-4 h-8 w-16 hover:bg-gray-100 bg-gray-300" type="submit" value="-1" /></a>
+				</p>
+				<p>
+					<a href=# id=button05><input class="rounded m-4 h-8 w-16 hover:bg-gray-100 bg-gray-300" type="submit" value="-5" /></a>
+				</p>
+				<p>
+					<a href=# id=button010><input class="rounded m-4 h-8 w-16 hover:bg-gray-100 bg-gray-300" type="submit" value="-10" /></a>
+				</p>
+				</div>
+			</form>
+        </div>
+        <footer>	
+			<hr />
+			<div class="flex text-sm justify-between mt-4 mb-4">
+			<p class="inline-block mt-0 text-gray-500 hover:text-white ml-4 mr-4"> Built Using Tailwind/HTML/JS </p>
+			<p class="inline-block mt-0 text-gray-500 hover:text-white ml-4 mr-4"> To Improve Personal Skill </p>
+			<p class="inline-block mt-0 text-gray-500 hover:text-white ml-4 mr-4"> Mark up by: Nicholas Ciechanowski </p>
+		</div>
+		</footer>
+    </body>
+</html>
