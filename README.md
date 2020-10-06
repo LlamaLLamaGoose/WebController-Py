@@ -11,7 +11,7 @@ I created this so co-workers can control the volume of spotify while they take c
 
 
 ## Installation
-`
+```
 apt-get install python3-devel
 apt-get install gcc-core
 apt-get install libcrypt-devel
@@ -25,4 +25,4 @@ python3 -m easy_install onkyo-eiscp
 
 cd into WebController-Py-master
 python3 -m webcontroller.py
-`
+```
